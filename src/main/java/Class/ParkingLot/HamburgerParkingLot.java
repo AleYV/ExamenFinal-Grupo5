@@ -33,4 +33,9 @@ public class HamburgerParkingLot implements ParkingLot {
         }
         return false;
     }
+
+    @Override
+    public boolean isFull(){
+        return nCars == parkingCapacity;
+    }
 }

@@ -33,4 +33,9 @@ public class FriedChickenParkingLot implements ParkingLot {
         }
         return false;
     }
+
+    @Override
+    public boolean isFull(){
+        return nCars == parkingCapacity;
+    }
 }

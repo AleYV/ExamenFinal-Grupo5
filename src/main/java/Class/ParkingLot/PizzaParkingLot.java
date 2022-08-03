@@ -33,4 +33,14 @@ public class PizzaParkingLot implements ParkingLot {
         }
         return false;
     }
+
+    @Override
+    public boolean isFull(){
+        return nCars == parkingCapacity;
+    }
+
+    @Override
+    public String toString() {
+        return "with capacity: " + parkingCapacity;
+    }
 }
