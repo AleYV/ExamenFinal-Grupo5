@@ -1,20 +1,18 @@
 package Class.Branch;
 
 import Class.Menu.AbstractMenu;
-import Interface.Delivery;
-import Interface.ParkingLot;
 
 public abstract class FastFoodBranch {
 
     protected int localCapacity;
     protected boolean autoPickUpOption;
     protected String address;
-    protected ParkingLot parkingLot;
-    protected Delivery delivery;
+    protected boolean parkingLot;
+    protected boolean delivery;
     protected AbstractMenu menu;
 
     public FastFoodBranch(int localCapacity, boolean autoPickUpOption,
-                          String address, ParkingLot parkingLot, Delivery delivery, AbstractMenu menu) {
+                          String address, boolean parkingLot, boolean delivery, AbstractMenu menu) {
         this.localCapacity = localCapacity;
         this.autoPickUpOption = autoPickUpOption;
         this.address = address;
@@ -29,9 +27,9 @@ public abstract class FastFoodBranch {
 
     public boolean hasAutoPickUpOption(){ return autoPickUpOption; }
 
-    public Delivery getDelivery(){ return delivery; }
+    public boolean hasDelivery(){ return delivery; }
 
-    public ParkingLot getParkingLot(){ return parkingLot; }
+    public boolean hasParkingLot(){ return parkingLot; }
 
     public AbstractMenu getMenu(){ return menu; }
 
@@ -39,9 +37,9 @@ public abstract class FastFoodBranch {
     public String toString(){
         String sString = "My address is: " + address + " with " + localCapacity + " of capacity"
                 + "\ncan autoPickUp?: " + autoPickUpOption;
-        if(delivery != null) sString += "\nwith Delivery";
-        else sString += "\ndont have Delivery";
-        if(parkingLot != null) sString += "\nwith Parking lot";
+        if(delivery) sString += "\nwith delivery";
+        else sString += "\ndont have delivery";
+        if(parkingLot) sString += "\nwith Parking lot";
         else sString += "\ndont have Parking lot";
         return sString;
     }
