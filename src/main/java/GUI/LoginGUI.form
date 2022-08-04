@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.LoginGUI">
+  <grid id="27dc6" binding="loginPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="376" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-10526108"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="63eee" class="javax.swing.JLabel" binding="nameLabel">
+        <constraints/>
+        <properties>
+          <text value="Usuario"/>
+        </properties>
+      </component>
+      <component id="ed41a" class="javax.swing.JTextField" binding="nameField">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="41e2e" class="javax.swing.JLabel" binding="passwordLabel">
+        <constraints/>
+        <properties>
+          <text value="Contraseña"/>
+        </properties>
+      </component>
+      <component id="ae427" class="javax.swing.JTextField" binding="passwordField">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="1c736" class="javax.swing.JButton" binding="LoginButton">
+        <constraints/>
+        <properties>
+          <text value="Iniciar sesion"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
