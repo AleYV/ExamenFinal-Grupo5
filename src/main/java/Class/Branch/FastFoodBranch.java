@@ -43,8 +43,6 @@ public abstract class FastFoodBranch {
         else sString += "\ndont have Delivery";
         if(parkingLot != null) sString += "\nwith Parking lot";
         else sString += "\ndont have Parking lot";
-
-        sString += "\n";
         return sString;
     }
 
