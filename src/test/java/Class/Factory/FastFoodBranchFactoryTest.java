@@ -43,8 +43,8 @@ class FastFoodBranchFactoryTest {
                     () -> assertEquals("A wholesome address", newBranch.getAddress()),
                     () -> assertTrue(newBranch.hasParkingLot()),
                     () -> assertTrue(newBranch.hasDelivery()),
-                    () -> assertNotEquals(null, newBranch.getMenu()),
-                    () -> assertNotEquals(null, newBranch.getMenu().getMenuList()),
+                    () -> assertNotNull(newBranch.getMenu()),
+                    () -> assertNotNull(newBranch.getMenu().getMenuList()),
                     () -> assertEquals(9, newBranch.getMenu().getMenuList().size())
             );
         }
@@ -70,8 +70,8 @@ class FastFoodBranchFactoryTest {
                     () -> assertEquals(address, newBranch.getAddress()),
                     () -> assertEquals(parkingLot, newBranch.hasParkingLot()),
                     () -> assertEquals(delivery, newBranch.hasDelivery()),
-                    () -> assertNotEquals(null, newBranch.getMenu()),
-                    () -> assertNotEquals(null, newBranch.getMenu().getMenuList()),
+                    () -> assertNotNull(newBranch.getMenu()),
+                    () -> assertNotNull(newBranch.getMenu().getMenuList()),
                     () -> assertEquals(menuLength, newBranch.getMenu().getMenuList().size())
             );
         }
@@ -102,8 +102,8 @@ class FastFoodBranchFactoryTest {
                     () -> assertEquals("Another wholesome address", newBranch.getAddress()),
                     () -> assertFalse(newBranch.hasParkingLot()),
                     () -> assertTrue(newBranch.hasDelivery()),
-                    () -> assertNotEquals(null, newBranch.getMenu()),
-                    () -> assertNotEquals(null, newBranch.getMenu().getMenuList()),
+                    () -> assertNotNull(newBranch.getMenu()),
+                    () -> assertNotNull(newBranch.getMenu().getMenuList()),
                     () -> assertEquals(7, newBranch.getMenu().getMenuList().size())
             );
         }
@@ -112,7 +112,7 @@ class FastFoodBranchFactoryTest {
         @RepeatedTest(5)
         void hamburgerBranchWithRandomOptions(){
             Random rng = new Random();
-            localCapacity = rng.nextInt(1, localCapacity);
+            localCapacity = rng.nextInt(1, 100);
             autoPickUpOption = rng.nextBoolean();
             parkingLot = rng.nextBoolean();
             delivery = rng.nextBoolean();
@@ -129,8 +129,8 @@ class FastFoodBranchFactoryTest {
                     () -> assertEquals(address, newBranch.getAddress()),
                     () -> assertEquals(parkingLot, newBranch.hasParkingLot()),
                     () -> assertEquals(delivery, newBranch.hasDelivery()),
-                    () -> assertNotEquals(null, newBranch.getMenu()),
-                    () -> assertNotEquals(null, newBranch.getMenu().getMenuList()),
+                    () -> assertNotNull(newBranch.getMenu()),
+                    () -> assertNotNull(newBranch.getMenu().getMenuList()),
                     () -> assertEquals(menuLength, newBranch.getMenu().getMenuList().size())
             );
         }
