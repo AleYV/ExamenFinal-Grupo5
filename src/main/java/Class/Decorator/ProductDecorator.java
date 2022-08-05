@@ -4,8 +4,10 @@ import Class.Product.AbstractProduct;
 
 import javax.swing.*;
 
-public class ProductDecorator extends AbstractProduct {
-    public ProductDecorator(String name, float price, ImageIcon img) {
-        super(name, price, img);
+public abstract class ProductDecorator {
+    AbstractProduct product;
+    public ProductDecorator(AbstractProduct product){
+        this.product=product;
     }
+    public abstract float calculateCost();
 }

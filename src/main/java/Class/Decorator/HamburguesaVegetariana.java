@@ -1,13 +1,16 @@
 package Class.Decorator;
 
+import Class.Product.AbstractProduct;
+
 import javax.swing.*;
 
 public class HamburguesaVegetariana extends ProductDecorator{
-    public HamburguesaVegetariana(String name, float price, ImageIcon img) {
-        super(name, price, img);
-    }
 
-    public float calculateCost(HamburguesaVegetariana hamburger){
-        return hamburger.getPrice()*2;
+    public HamburguesaVegetariana(AbstractProduct hamburger){
+        super(hamburger);
+    }
+    @Override
+    public float calculateCost() {
+        return product.getPrice()*1.5f;
     }
 }

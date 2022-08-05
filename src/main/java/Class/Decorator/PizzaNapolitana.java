@@ -1,13 +1,17 @@
 package Class.Decorator;
 
+import Class.Product.AbstractProduct;
+
 import javax.swing.*;
 
 public class PizzaNapolitana extends ProductDecorator{
-    public PizzaNapolitana(String name, float price, ImageIcon img) {
-        super(name, price, img);
+
+    public PizzaNapolitana(AbstractProduct pizza){
+        super(pizza);
     }
 
-    public float calculateCost(PizzaNapolitana pizza){
-        return pizza.getPrice()*1.4f;
+    @Override
+    public float calculateCost() {
+        return product.getPrice()*1.4f;
     }
 }

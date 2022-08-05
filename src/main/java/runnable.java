@@ -1,10 +1,13 @@
 import Class.Branch.FastFoodBranch;
+import Class.Decorator.PizzaNapolitana;
 import Class.Factory.FastFoodBranchFactory;
 import Class.Factory.HamburgerBranchFactory;
 import Class.Factory.PizzaBranchFactory;
 import Class.Menu.AbstractMenu;
 import Class.Menu.HamburgerMenu;
 import Class.Menu.PizzaMenu;
+import Class.Product.AbstractProduct;
+import Class.Product.Pizza;
 import Interface.MenuObserver;
 
 import javax.swing.*;
@@ -20,7 +23,7 @@ import javax.swing.*;
 
 public class runnable {
     public static void main(String[] args) {
-        /*FastFoodBranch newPizzaBranch = FastFoodBranchFactory.getBranch(
+        FastFoodBranch newPizzaBranch = FastFoodBranchFactory.getBranch(
                 new PizzaBranchFactory(10, true, "here",
                         false, false, new PizzaMenu(7)));
         System.out.println(newPizzaBranch.toString());
@@ -54,15 +57,21 @@ public class runnable {
         yetAnotherHamburgerBranch.getMenu().generateMenu();
         yetAnotherHamburgerBranch.getMenu().printMenu();
 
-        //System.out.println("#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=");*/
+        System.out.println("#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=");
+
         AbstractMenu pizzaMenu = new PizzaMenu(3);
         pizzaMenu.generateMenu();
-        FastFoodBranch newPizzaBranch = FastFoodBranchFactory.getBranch(
+        FastFoodBranch newPizzaBranch1 = FastFoodBranchFactory.getBranch(
                 new PizzaBranchFactory(10, true, "here",
                         false, false, pizzaMenu));
-        newPizzaBranch.getMenu().printMenu();
-        newPizzaBranch.getMenu().addObserver(pizzaMenu);
+        newPizzaBranch1.getMenu().printMenu();
+        newPizzaBranch1.getMenu().addObserver(pizzaMenu);
         pizzaMenu.timePasses();
-        newPizzaBranch.getMenu().printMenu();
+        newPizzaBranch1.getMenu().printMenu();
+        System.out.println("======================");
+        AbstractProduct pizza = new Pizza("napolitana",10.2f,null);
+        PizzaNapolitana pizzanapolitana = new PizzaNapolitana(pizza);
+        System.out.println("El costo de una pizza napolitana es: "+pizzanapolitana.calculateCost());
+        System.out.println("El costo de una pizza es: "+pizza.getPrice());
     }
 }
