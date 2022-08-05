@@ -1,12 +1,10 @@
 package Class.Menu;
 
 import Class.Product.AbstractProduct;
-import Class.Product.Hamburger;
 import Class.Product.Pizza;
 import Interface.MenuObserver;
 
-import javax.swing.*;
-import java.util.Random;
+import javax.swing.ImageIcon;
 
 public class PizzaMenu extends AbstractMenu implements MenuObserver {
 

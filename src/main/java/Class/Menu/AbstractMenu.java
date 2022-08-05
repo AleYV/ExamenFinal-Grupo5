@@ -1,15 +1,10 @@
 package Class.Menu;
 
 import Class.Product.AbstractProduct;
-import Class.Product.Hamburger;
-import Class.Product.Pizza;
 import Interface.MenuObserver;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.lang.Math;
-import java.util.Random;
 
 public abstract class AbstractMenu implements MenuObserver{
     protected int menuSize;
@@ -24,6 +19,7 @@ public abstract class AbstractMenu implements MenuObserver{
         return menu;
     }
 
+    //Fase de desarrollo
     public void printMenu(){
         System.out.println("Menu: ");
         for (AbstractProduct product:

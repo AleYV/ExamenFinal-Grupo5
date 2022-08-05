@@ -8,18 +8,12 @@ import Class.Menu.HamburgerMenu;
 import Class.Menu.PizzaMenu;
 import Class.Product.AbstractProduct;
 import Class.Product.Pizza;
-import Interface.MenuObserver;
-
-import javax.swing.*;
 
 /*
-* TODO: ESTA FUNCION ES SOLO CON FINES DE DEBUG, NO ES LA APP CLIENTE.
-*  ESTA FUNCION DEBE SER ELIMINADA EN LA FASE DE PRODUCCION. AL IGUAL QUE LOS METODOS
+* ESTA CLASE ES SOLO CON FINES DE DEBUG, NO ES LA APP CLIENTE.
+*  ESTA CLASE DEBE SER ELIMINADA EN LA FASE DE PRODUCCIÓN. AL IGUAL QUE LOS MÉTODOS
 *  TO STRING DE LAS CLASES
 * */
-
-
-
 
 public class runnable {
     public static void main(String[] args) {
