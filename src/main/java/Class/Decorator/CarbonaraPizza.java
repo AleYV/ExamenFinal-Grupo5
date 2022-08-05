@@ -2,9 +2,9 @@ package Class.Decorator;
 
 import Class.Product.AbstractProduct;
 
-public class PizzaCarbonada extends ProductDecorator{
+public class CarbonaraPizza extends ProductDecorator{
 
-    public PizzaCarbonada(AbstractProduct pizza){
+    public CarbonaraPizza(AbstractProduct pizza){
         super(pizza);
     }
 

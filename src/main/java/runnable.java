@@ -1,5 +1,5 @@
 import Class.Branch.FastFoodBranch;
-import Class.Decorator.PizzaNapolitana;
+import Class.Decorator.NeapolitanPizza;
 import Class.Factory.FastFoodBranchFactory;
 import Class.Factory.HamburgerBranchFactory;
 import Class.Factory.PizzaBranchFactory;
@@ -63,9 +63,9 @@ public class runnable {
         pizzaMenu.timePasses();
         newPizzaBranch1.getMenu().printMenu();
         System.out.println("======================");
-        AbstractProduct pizza = new Pizza("napolitana",10.2f,null);
-        PizzaNapolitana pizzanapolitana = new PizzaNapolitana(pizza);
-        System.out.println("El costo de una pizza napolitana es: "+pizzanapolitana.calculateCost());
+        AbstractProduct pizza = new Pizza("base",10.2f,null);
+        NeapolitanPizza neapolitanPizza = new NeapolitanPizza(pizza);
+        System.out.println("El costo de una pizza napolitana es: "+neapolitanPizza.calculateCost());
         System.out.println("El costo de una pizza es: "+pizza.getPrice());
     }
 }
