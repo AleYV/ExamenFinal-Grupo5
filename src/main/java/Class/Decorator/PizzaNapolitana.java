@@ -2,8 +2,6 @@ package Class.Decorator;
 
 import Class.Product.AbstractProduct;
 
-import javax.swing.*;
-
 public class PizzaNapolitana extends ProductDecorator{
 
     public PizzaNapolitana(AbstractProduct pizza){
