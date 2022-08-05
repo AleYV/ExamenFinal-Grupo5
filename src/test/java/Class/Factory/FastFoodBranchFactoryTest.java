@@ -5,10 +5,7 @@ import Class.Menu.AbstractMenu;
 import Class.Menu.HamburgerMenu;
 import Class.Menu.PizzaMenu;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.Random;
 
@@ -52,8 +49,8 @@ class FastFoodBranchFactoryTest {
             );
         }
 
-        @Test
-        @DisplayName("Creado con atributos aleatorios")
+        @DisplayName("Creado con atributos aleatorios, esta prueba se realiza 5 veces")
+        @RepeatedTest(5)
         void pizzaBranchWithRandomOptions(){
             Random rng = new Random();
             localCapacity = rng.nextInt(1, localCapacity);
@@ -111,8 +108,8 @@ class FastFoodBranchFactoryTest {
             );
         }
 
-        @Test
-        @DisplayName("Creado con atributos aleatorios")
+        @DisplayName("Creado con atributos aleatorios, este prueba se realiza 5 veces")
+        @RepeatedTest(5)
         void hamburgerBranchWithRandomOptions(){
             Random rng = new Random();
             localCapacity = rng.nextInt(1, localCapacity);
