@@ -1,4 +1,4 @@
-package Class;
+package Class.Observer;
 
 import Class.Product.AbstractProduct;
 import Interface.MenuObserver;
