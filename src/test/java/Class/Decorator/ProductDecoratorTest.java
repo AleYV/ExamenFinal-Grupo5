@@ -8,26 +8,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductDecoratorTest {
-    AbstractProduct pizza = new Pizza("napolitana",10.2f,null);
-    AbstractProduct hamburger = new Hamburger("vegetariana", 5.5f, null);
+    AbstractProduct pizza = new Pizza("base",10.2f,null);
+    AbstractProduct hamburger = new Hamburger("normal", 5.5f, null);
 
     @Test
     public void testCalculateCostPizza(){
-        PizzaNapolitana pizzanapolitana = new PizzaNapolitana(pizza);
-        PizzaCarbonada pizzacarbonada = new PizzaCarbonada(pizza);
-        float result = pizzanapolitana.calculateCost();
+        NeapolitanPizza neapolitanPizza = new NeapolitanPizza(pizza);
+        CarbonaraPizza carbonaraPizza = new CarbonaraPizza(pizza);
+        float result = neapolitanPizza.calculateCost();
         assertEquals(pizza.getPrice()*1.4f,result);
-        result = pizzacarbonada.calculateCost();
+        result = carbonaraPizza.calculateCost();
         assertEquals(pizza.getPrice()*1.3f,result);
     }
 
     @Test
     public void testCalculateCostHamburger(){
-        HamburguesaVegetariana hamburguesaVegetariana = new HamburguesaVegetariana(hamburger);
-        HamburguesaRanchera hamburguesaRanchera = new HamburguesaRanchera(hamburger);
-        float result = hamburguesaVegetariana.calculateCost();
+        VegetarianHamburger vegetarianHamburger = new VegetarianHamburger(hamburger);
+        RanchHamburger ranchHamburger = new RanchHamburger(hamburger);
+        float result = vegetarianHamburger.calculateCost();
         assertEquals(hamburger.getPrice()*1.5f,result);
-        result = hamburguesaRanchera.calculateCost();
+        result = ranchHamburger.calculateCost();
         assertEquals(hamburger.getPrice()*1.2f,result);
     }
 }

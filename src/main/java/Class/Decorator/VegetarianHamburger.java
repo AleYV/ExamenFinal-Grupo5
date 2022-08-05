@@ -2,9 +2,9 @@ package Class.Decorator;
 
 import Class.Product.AbstractProduct;
 
-public class HamburguesaVegetariana extends ProductDecorator{
+public class VegetarianHamburger extends ProductDecorator{
 
-    public HamburguesaVegetariana(AbstractProduct hamburger){
+    public VegetarianHamburger(AbstractProduct hamburger){
         super(hamburger);
     }
     @Override
