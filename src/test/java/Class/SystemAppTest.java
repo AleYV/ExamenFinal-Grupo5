@@ -25,7 +25,6 @@ class SystemAppTest {
     String address;
     AbstractMenu menu;
     FastFoodBranch newBranch;
-
     MenuEditor menuEditor = new MenuEditor();
 
     @DisplayName("Dado que se desea crear una nueva sucursal para la venta de pizzas")
@@ -201,7 +200,7 @@ class SystemAppTest {
 
         @DisplayName("Con atributos generados aleatoriamente, esta prueba se realiza 3 veces")
         @RepeatedTest(3)
-        void pizzaBranchRandomValues(){
+        void hamburgerBranchRandomValues(){
             Random rng = new Random();
             localCapacity = rng.nextInt(1, 100);
             autoPickUpOption = rng.nextBoolean();
