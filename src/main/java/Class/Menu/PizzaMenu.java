@@ -20,15 +20,9 @@ public class PizzaMenu extends AbstractMenu implements MenuObserver {
     }
 
     @Override
-    public void timePasses() {
-        int numero = (int)(Math.random()*5+1);
-        newProduct = new Pizza("Combo "+numero,20,new ImageIcon(PATHPIZZA+numero+".jpg"));
-        notifyObservers();
-    }
-
-    @Override
-    public void update(AbstractProduct newProduct) {
+    public void update(String menuType,AbstractProduct newProduct) {
         menu.add(newProduct);
         menuSize++;
+        System.out.println("Se ah agregado un nuevo combo de "+menuType);
     }
 }
