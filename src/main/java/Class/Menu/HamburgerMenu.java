@@ -4,8 +4,6 @@ import Class.Product.AbstractProduct;
 import Class.Product.Hamburger;
 import Interface.MenuObserver;
 
-import javax.swing.ImageIcon;
-
 public class HamburgerMenu extends AbstractMenu implements MenuObserver {
 
     public HamburgerMenu(int menuSize) {

@@ -13,13 +13,4 @@ public abstract class AbstractMenu implements MenuObserver{
     public ArrayList<AbstractProduct> getMenuList() {
         return menu;
     }
-
-    //Fase de desarrollo
-    public void printMenu(){
-        System.out.println("Menu: ");
-        for (AbstractProduct product:
-             menu) {
-            System.out.println(product.toString());
-        }
-    }
 }

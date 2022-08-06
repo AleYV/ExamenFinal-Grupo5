@@ -33,15 +33,4 @@ public abstract class FastFoodBranch {
 
     public AbstractMenu getMenu(){ return menu; }
 
-    @Override
-    public String toString(){
-        String sString = "My address is: " + address + " with " + localCapacity + " of capacity"
-                + "\ncan autoPickUp?: " + autoPickUpOption;
-        if(delivery) sString += "\nwith delivery";
-        else sString += "\ndont have delivery";
-        if(parkingLot) sString += "\nwith Parking lot";
-        else sString += "\ndont have Parking lot";
-        return sString;
-    }
-
 }
