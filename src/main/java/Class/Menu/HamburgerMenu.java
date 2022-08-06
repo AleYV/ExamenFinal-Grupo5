@@ -15,21 +15,14 @@ public class HamburgerMenu extends AbstractMenu implements MenuObserver {
     @Override
     public void generateMenu() {
         for(int i = 0; i < menuSize; i++){
-            menu.add(new Hamburger("Combo " + i, (1.79f)*i, null));
+            menu.add(new Hamburger("Combo " + (i+1), (1.79f)*(i+1), null));
         }
     }
 
     @Override
-    public void timePasses() {
-        int numero = (int)(Math.random()*5+1);
-        newProduct = new Hamburger("Combo "+numero,20, new ImageIcon(PATHHAMBURGER+numero+".jpg"));
-        notifyObservers();
-    }
-
-
-    @Override
-    public void update(AbstractProduct newProduct) {
+    public void update(String menuType, AbstractProduct newProduct) {
         menu.add(newProduct);
         menuSize++;
+        System.out.println("Se ah agregado un nuevo combo de "+menuType);
     }
 }
