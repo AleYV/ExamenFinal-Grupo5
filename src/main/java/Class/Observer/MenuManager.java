@@ -29,10 +29,12 @@ public class MenuManager {
     }
 
 
-    public void notifyObserver(String menuType,AbstractProduct abstractProduct){
+    public String notifyObserver(String menuType,AbstractProduct abstractProduct){
         List<MenuObserver> clients = observers.get(menuType);
+        String capture = "";
         for(MenuObserver observer : clients){
-            observer.update(menuType,abstractProduct);
+            capture = observer.update(menuType,abstractProduct);
         }
+        return capture;
     }
 }

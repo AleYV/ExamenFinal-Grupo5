@@ -20,9 +20,9 @@ public class PizzaMenu extends AbstractMenu implements MenuObserver {
     }
 
     @Override
-    public void update(String menuType,AbstractProduct newProduct) {
+    public String update(String menuType,AbstractProduct newProduct) {
         menu.add(newProduct);
         menuSize++;
-        System.out.println("Se ah agregado un nuevo combo de "+menuType);
+        return "Se ah agregado un nuevo combo de pizza";
     }
 }
